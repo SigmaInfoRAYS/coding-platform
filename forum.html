@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+    <script src="forum.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <title>Forum</title>
+  </head>
+  <body class="l">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="navbar-brand" onclick="dashboard()">Dash Board</div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active mb-2">
+            <a class="nav-link" href="forum.html">Forum </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="comp nav-link" href="#"
+              ><span class="badge badge-danger">Competience Score</span></a
+            >
+          </li>
+
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="leaderboard.html">Leader Board </a>
+          </li>
+
+          <li class="nav-item">
+            <div class="nav-link" onclick="profile()">Profile</div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="forom container">
+      <fieldset>
+        <legend>Have a doubt? Find it here...</legend>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Doubt about</th>
+              <th scope="col">Number of Answers</th>
+              <th scope="col">Asked by</th>
+            </tr>
+          </thead>
+          <tbody id="forum_table"></tbody>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Not in the list? Ask Your doubt Here</legend>
+        <div class="question-box">
+          <form>
+            <div class="form-group">
+              <label for="question-name" class="display-4">Query Title:</label>
+              <input
+                type="text"
+                class="title-box form-control"
+                id="query-name"
+                placeholder="add an appropriate question title here"
+              />
+            </div>
+            <div class="form-group">
+              <div class="display-4">
+                <label for="query">Query</label>
+              </div>
+              <textarea name="query" id="query" cols="100" rows="10"></textarea>
+            </div>
+          </form>
+          <button type="submit" class="btn btn-primary" onclick="addquestion()">
+            Ask Query
+          </button>
+        </div>
+      </fieldset>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

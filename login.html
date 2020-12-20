@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+  <script src="https://gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+  <script src="https://gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <script src="login.js"></script>
+  <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <title>Login</title>
+</head>
+<body class="l">
+<div class="page row">
+  <div class="decoration col-md-8">
+    <div class="heading display-3">Welcome To CCP!</div>
+    <div class="about-site">
+      This was created as a platform to help programmers make it big in the
+      world of algorithms, computer programming, and programming contests.
+      We work hard to revive the geek in you by hosting a programming
+      contest at the start of the month and two smaller programming
+      challenges at the middle and end of the month. We also aim to have
+      training sessions and discussions related to algorithms, binary
+      search, technicalities like array size and the likes. Apart from
+      providing a platform for programming competitions, We also havew
+      various algorithm tutorials and forum discussions to help those who
+      are new to the world of computer programming.
+    </div>
+  </div>
+  <div class="login-info col-sm-12 col-md-4">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="pill" href="#signup"
+        >Sign Up</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#login">Login</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane fade show active" role="tab-panel" id="signup">
+        <div class="form col-sm-12 col-md-5" id="signup-form">
+          <div class="form-group">
+            <label for="name"> Name: </label>
+            <input type="text" class="form-control" id="signname" />
+          </div>
+          <div class="form-group">
+            <label for="email"> Email Address: </label>
+            <input type="email" class="form-control" id="signemail" />
+          </div>
+          <div class="form-group">
+            <label for="password"> Password: </label>
+            <input type="password" class="form-control" id="signpassword" />
+          </div>
+          <div class="form-check-inline">
+            <input
+                    type="radio"
+                    class="form-check-input"
+                    id="signstudent"
+                    name="category"
+                    value="student"
+            />
+            <label for="student"> Student </label>
+          </div>
+          <div class="form-check-inline">
+            <input
+                    type="radio"
+                    class="form-check-input"
+                    id="signteacher"
+                    name="category"
+                    value="teacher"
+            />
+            <label for="teacher"> Teacher </label>
+          </div>
+          <div class="lab-type form-control">
+            <label for="signuplab"> select your lab </label>
+            <select name="aloted-lab" id="signuplab">
+              <option selected id="lab1" value="lab1">A</option>
+              <option id="lab2" value="lab2">B</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success" onclick="signup()">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" role="tab-panel" id="login">
+        <div class="form col-sm-12 col-md-5">
+          <div class="form-group">
+            <label for="username"> Email: </label>
+            <input type="text" class="form-control" id="loginemail" />
+          </div>
+          <div class="form-group">
+            <label for="pword"> Password: </label>
+            <input
+                    type="password"
+                    class="form-control"
+                    id="loginpassword"
+            />
+          </div>
+          <div class="form-check-inline">
+            <input
+                    type="radio"
+                    class="form-check-input"
+                    id="logstudent"
+                    name="cat"
+                    value="student"
+            />
+            <label for="st"> Student </label>
+          </div>
+          <div class="form-check-inline">
+            <input
+                    type="radio"
+                    class="form-check-input"
+                    id="logteacher"
+                    name="cat"
+                    value="teacher"
+            />
+            <label for="te"> Teacher </label>
+          </div>
+          <div class="lab-type form-control">
+            <label for="aloted-lab"> select your lab </label>
+            <select name="aloted-lab" id="lab">
+              <option value="lab1" id="laboratory1">A</option>
+              <option value="lab2" id="laboratory2">B</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success" onclick="login()">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+></script>
+</body>
+</html>

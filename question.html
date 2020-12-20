@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+    <script src="question.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Assignment</title>
+  </head>
+  <body class="l">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="navbar-brand" onclick="dashboard()">Dash Board</div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="forum.html">Forum </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="comp nav-link" href="#"
+              ><span class="badge badge-danger">Competience Score</span></a
+            >
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="leaderboard.html">Leader Board </a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link" onclick="profile()">Profile</div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="question-container container">
+      <div class="question-heading" id="question-heading"></div>
+      <div class="question blockquote" id="question"></div>
+      <h3 class="io-heading">Sample Input/output:</h3>
+
+      <div class="io row">
+        <div class="sample-input col-sm-12 col-md-6" id="sample-input">
+          Input:<br />
+        </div>
+        <div class="sample-output col-sm-12 col-md-6" id="sample-output">
+          Output:<br />
+        </div>
+      </div>
+      <div class="row col-sm-6 col-md-5 ml-2">
+        <div class="form-group">
+          <label for="language">Select Language:</label>
+          <select name="language" id="language" class="form-control">
+            <option value="50" id="c">C</option>
+            <option value="52" id="cpp">C++</option>
+            <option value="71" id="python">Python 3</option>
+            <option value="62" id="java">Java</option>
+            <option value="78" id="kotlin">Kotlin</option>
+            <option value="60" id="go">Go-Lang</option>
+            <option value="63" id="js">Node Js</option>
+            <option value="80" id="R">R</option>
+            <option value="81" id="scala">Scala</option>
+          </select>
+        </div>
+      </div>
+      <div class="verdicts">
+        <div class="verdict-right col-md-8" id="correct"></div>
+        <div class="verdict-wrong col-md-8" id="Wrong"></div>
+        <div class="verdict-loading col-md-8" id="Loading">
+          <i class="fas fa-spinner"></i> Loading...
+        </div>
+      </div>
+      <div class="code-container">
+        <textarea
+          name="code"
+          id="code"
+          rows="12"
+          class="code col-12"
+          placeholder="put your code here"
+        ></textarea>
+      </div>
+      <div class="actions">
+        <button class="buttons btn btn-warning" id="RUN" onclick="run()">
+          RUN
+        </button>
+        <button class="buttons btn btn-success" id="submit" onclick="submit()">
+          SUBMIT
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e319f68310.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+    <script src="add-question.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Add Question</title>
+  </head>
+  <body class="l">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <a class="navbar-brand" href="faculty-dashboard.html">Dash Board</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mb-2">
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="forum.html">Forum </a>
+            </li>
+            <a class="nav-link" href="leaderboard.html">Leader Board </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faculty-profile.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container profile-box">
+      <div>
+        <div class="form-group">
+          <label for="question-name" class="display-4">Question Title:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="question-name"
+            placeholder="add an appropriate question title here"
+          />
+        </div>
+        <div class="form-group">
+          <div class="display-4">
+            <label for="question">Question And Constraints:</label>
+          </div>
+          <textarea
+            name="question"
+            id="question"
+            cols="120"
+            rows="15"
+          ></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <div class="inpLabel">
+              <label for="sample-input">Sample Input:</label>
+            </div>
+            <textarea
+              name="sample-input"
+              id="sample-input"
+              cols="50"
+              rows="8"
+            ></textarea>
+          </div>
+          <div class="form-group col-md-6">
+            <div class="inpLabel">
+              <label for="sample-output">Sample Output:</label>
+            </div>
+            <textarea
+              name="sample-output"
+              id="sample-output"
+              cols="50"
+              rows="8"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <div class="inpLabel">
+              <label for="hidden-input">Hidden Input:</label>
+            </div>
+            <textarea
+              name="hidden-input"
+              id="hidden-input"
+              cols="50"
+              rows="8"
+            ></textarea>
+          </div>
+          <div class="form-group col-md-6">
+            <div class="inpLabel">
+              <label for="hidden-output">Hidden Output:</label>
+            </div>
+            <textarea
+              name="hidden-output"
+              id="hidden-output"
+              cols="50"
+              rows="8"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="inpLabel">
+            <label for="inputState">Problem Type</label>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <select
+              id="inputState"
+              class="form-control col-md-4 align-self-center"
+            >
+              <option selected id="practice-problem">Practice</option>
+              <option id="lab-problem">Lab</option>
+              <option id="contest-problem">Contest</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="adding()">Add Problem</button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

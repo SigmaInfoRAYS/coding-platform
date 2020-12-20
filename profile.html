@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+    <script src="profile.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Profile</title>
+  </head>
+  <body class="l">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <a class="navbar-brand" href="dashboard.html">Dash Board</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-items mb-2">
+            <a class="nav-link" href="forum.html">Forum </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="comp nav-link" href="#"
+              ><span class="badge badge-danger">Competience Score</span></a
+            >
+          </li>
+          <li class="nav-item mb-2">
+            <a class="nav-link" href="leaderboard.html">Leader Board </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Profile.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="profile-box container col-md-4">
+      <div class="image d-flex justify-content-center">
+        <img src="user.jpeg" />
+      </div>
+      <div class="user-name display-4" id="username">Loading...</div>
+      <div class="email-address display-5" id="user-mail">Loading...</div>
+      <div class="email-address display-5" id="lab">Loading...</div>
+        <div class="progress">
+          <div
+            class="progress-bar bg-success"
+            id="practice-progress"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="0"
+          >
+            <span id="practice-progress-text"></span>
+          </div>
+        </div>
+
+        <div class="label">Practice Problems Completed</div>
+        <div class="progress">
+          <div
+            class="progress-bar bg-success"
+            id="lab-progress"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="0"
+          >
+            <span id="lab-progress-text"></span>
+          </div>
+        </div>
+
+        <div class="label">Lab Work Completed</div>
+        <div class="progress">
+          <div
+            class="progress-bar bg-success"
+            id="contest-progress"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="0"
+          >
+            <span id="contest-progress-text"></span>
+          </div>
+        </div>
+
+        <div class="label">Contest problems Completed</div>
+        <button class="btn btn-danger" onclick="logout()">Log Out</button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
