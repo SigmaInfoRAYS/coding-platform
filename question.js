@@ -131,13 +131,13 @@ function sendcode(flag, code, input, output, lang, type, submmision) {
     }
   });
 
-  xhr.open("POST", "https://judge0.p.rapidapi.com/submissions");
+  xhr.open("POST", "https://judge0-ce.p.rapidapi.com/submissions");
   xhr.setRequestHeader("content-type", "application/json");
   xhr.setRequestHeader(
     "x-rapidapi-key",
     "88bd6c7e27msh81fe98de8ce9415p19a2f0jsneef5d2a8aa5a"
   );
-  xhr.setRequestHeader("x-rapidapi-host", "judge0.p.rapidapi.com");
+  xhr.setRequestHeader("x-rapidapi-host", "judge0-ce.p.rapidapi.com");
 
   xhr.send(data);
 }
@@ -148,7 +148,7 @@ function getoutput(flag, token, output, type, submission, lang) {
   var correct = document.getElementById("correct");
 
   const data = null;
-  const url = "https://judge0.p.rapidapi.com/submissions/" + token;
+  const url = "https://judge0-ce.p.rapidapi.com/submissions/" + token;
 
   const xhr = new XMLHttpRequest();
 
@@ -320,7 +320,7 @@ function getoutput(flag, token, output, type, submission, lang) {
     "x-rapidapi-key",
     "88bd6c7e27msh81fe98de8ce9415p19a2f0jsneef5d2a8aa5a"
   );
-  xhr.setRequestHeader("x-rapidapi-host", "judge0.p.rapidapi.com");
+  xhr.setRequestHeader("x-rapidapi-host", "judge0-ce.p.rapidapi.com");
 
   xhr.send(data);
 }
