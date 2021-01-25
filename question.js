@@ -1,14 +1,12 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyCNFY40jM0o9KvdBCMbNe3XqLKY0EGQgrE",
-  authDomain: "codingweb-46655.firebaseapp.com",
-  databaseURL: "https://codingweb-46655.firebaseio.com",
-  projectId: "codingweb-46655",
-  storageBucket: "codingweb-46655.appspot.com",
-  messagingSenderId: "869602340221",
-  appId: "1:869602340221:web:452898e8c1c11bd7e03014",
-  measurementId: "G-W9QGQ1ZSZK",
-};
-
+var firebaseConfig = {
+    apiKey: "AIzaSyCgRDhjFb26u8iiMkoJP3TpfSlZnU96P-w",
+    authDomain: "medicodes-77362.firebaseapp.com",
+    projectId: "medicodes-77362",
+    storageBucket: "medicodes-77362.appspot.com",
+    messagingSenderId: "387859315681",
+    appId: "1:387859315681:web:23df9db36792f34e2930a0",
+    measurementId: "G-0RZHG2KT93"
+  };
 firebase.initializeApp(firebaseConfig);
 firebase.analytics;
 
@@ -135,7 +133,7 @@ function sendcode(flag, code, input, output, lang, type, submmision) {
   xhr.setRequestHeader("content-type", "application/json");
   xhr.setRequestHeader(
     "x-rapidapi-key",
-    "88bd6c7e27msh81fe98de8ce9415p19a2f0jsneef5d2a8aa5a"
+    "0802dd2a4bmsh43ce6df9a0931d2p1dcef6jsn1e27a5c8bf2a"
   );
   xhr.setRequestHeader("x-rapidapi-host", "judge0-ce.p.rapidapi.com");
 
@@ -318,7 +316,7 @@ function getoutput(flag, token, output, type, submission, lang) {
   xhr.open("GET", url);
   xhr.setRequestHeader(
     "x-rapidapi-key",
-    "88bd6c7e27msh81fe98de8ce9415p19a2f0jsneef5d2a8aa5a"
+    "0802dd2a4bmsh43ce6df9a0931d2p1dcef6jsn1e27a5c8bf2a"
   );
   xhr.setRequestHeader("x-rapidapi-host", "judge0-ce.p.rapidapi.com");
 
