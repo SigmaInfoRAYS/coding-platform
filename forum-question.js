@@ -14,7 +14,7 @@ firebase.analytics;
 //id to answer questions
 
 
-var id = "yashagrawal300@gmail";
+var id = sessionStorage.getItem("email");
 var Fourm_Question_id = sessionStorage.getItem("Fourm_Question_id");
 
 
