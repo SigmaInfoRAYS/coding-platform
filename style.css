@@ -191,7 +191,7 @@
   padding-right: 0%;
 }
 .l {
-  background-color: mediumblue;
+  background-image: linear-gradient(to bottom right, #00334e, #145374);
   color: aliceblue;
 }
 
@@ -416,4 +416,34 @@ fieldset {
 
 .navbar {
   font-family: robotomono;
+}
+
+.start {
+  width: 800px;
+  height: 500px;
+  margin: 40px auto;
+  text-align: center;
+  background-color: rgba(221, 221, 221, 0.315);
+  padding-top: 10%;
+}
+.mcqQuestion {
+  width: 800px;
+  height: 800px;
+  margin: 100px auto;
+  padding-top: 10%;
+  background-color: rgba(221, 221, 221, 0.315);
+}
+
+.mcq-statement {
+  margin-bottom: 2%;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Jolly Lodger";
+  font-size: 150%;
+}
+
+.options {
+  width: 60%;
+  margin: 0 auto;
 }
