@@ -99,7 +99,7 @@ function addquestion() {
   } else {
     firebase
       .database()
-      .ref("forumId/")
+      .ref("ForumId/")
       .once("value")
       .then(function (snapshot) {
         var questionId = snapshot.val().ForumId;
